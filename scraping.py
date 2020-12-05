@@ -26,5 +26,10 @@ for n, tt in zip(name, soup.find_all("table", attrs={"id":"sub-table"})):
   for j in range(no):
       loc.append(v)
   exec('{}["Location"]=loc'.format(n))
-print(COLABA) 
+  exec('{}={}.drop({}.index[29])'.format(n,n,n))
  
+final_data = BPC.append([BORIVALI,SEALORD,COLABA,AEGIS,HPC,TROMBAY],sort=False)
+# print(final_data.loc[[28]])
+
+k_copy=final_data.copy()
+k_copy=k_copy.drop(k_copy.index[30])
